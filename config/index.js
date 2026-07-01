@@ -44,9 +44,10 @@ const config = {
       mode: 'hash'
     },
     devServer: {
-      host: 'localhost',
+      host: '0.0.0.0',
       port: 10086,
       open: false,
+      allowedHosts: 'all',
       // Taro's H5 target does not emit an entry index.html and serves a static
       // dir at "/". Point it at the committed public/ folder whose index.html
       // loads the in-memory dev bundle (runtime.js / taro.js / app.js).
