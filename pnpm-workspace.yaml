@@ -13,3 +13,9 @@ onlyBuiltDependencies:
   - core-js-pure
   - esbuild
   - swiper
+
+# pnpm 11 默认开启供应链冷却（minimumReleaseAge=1440 分钟/1 天）。
+# electron-to-chromium 是 browserslist 的浏览器版本数据、几乎每天发版，
+# 常因「太新」被拦。对它单独豁免即可，其余依赖仍享受 1 天冷却。
+minimumReleaseAgeExclude:
+  - electron-to-chromium
