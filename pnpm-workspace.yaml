@@ -1,0 +1,15 @@
+# pnpm 10.10+/11 起，overrides、onlyBuiltDependencies 等设置从 package.json 的
+# "pnpm" 字段迁移到这里。https://pnpm.io/settings
+
+# webpack 必须锁 5.78.0，新版 webpack 的 ProgressPlugin schema 与 Taro 3.6.34 不兼容
+overrides:
+  webpack: 5.78.0
+
+# 声明式放行需要执行 build script 的原生依赖（替代交互式 pnpm approve-builds）
+onlyBuiltDependencies:
+  - '@swc/core'
+  - '@tarojs/binding'
+  - core-js
+  - core-js-pure
+  - esbuild
+  - swiper

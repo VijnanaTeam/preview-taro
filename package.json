@@ -19,19 +19,6 @@
     "Android >= 4.1",
     "ios >= 8"
   ],
-  "pnpm": {
-    "overrides": {
-      "webpack": "5.78.0"
-    },
-    "onlyBuiltDependencies": [
-      "@swc/core",
-      "@tarojs/binding",
-      "core-js",
-      "core-js-pure",
-      "esbuild",
-      "swiper"
-    ]
-  },
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.24.0",
