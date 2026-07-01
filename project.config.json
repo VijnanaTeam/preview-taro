@@ -1,0 +1,15 @@
+{
+  "miniprogramRoot": "dist/",
+  "projectname": "parking-pay",
+  "description": "泊车票 · 停车缴费小程序",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false,
+    "es6": false,
+    "enhance": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "condition": {}
+}

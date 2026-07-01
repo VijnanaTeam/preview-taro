@@ -1,0 +1,65 @@
+/* ============================================================
+   泊车票 · Global theme
+   A tactile "parking-stub" aesthetic — asphalt dark ground,
+   signal-yellow road markings, new-energy plate accents.
+   ============================================================ */
+
+/* Design tokens live in a mixin so they can be attached both to
+   `page` (the mini-program root) and to each screen's `.page`
+   wrapper — the latter guarantees inheritance on H5 too. */
+@mixin theme-tokens {
+  --ink-900: #0e0f12;   /* deepest asphalt */
+  --ink-800: #16171b;   /* page ground */
+  --ink-700: #1e2025;   /* raised card */
+  --ink-600: #282b31;   /* hairlines / chips */
+  --ink-500: #3a3d45;   /* borders */
+
+  --paper: #f3f1e7;     /* ticket paper */
+  --paper-ink: #17181c; /* text on paper */
+
+  --signal: #f7d000;    /* road-marking yellow */
+  --signal-deep: #d9b400;
+  --plate: #16a06a;     /* new-energy green */
+  --plate-2: #2fc389;
+  --plate-blue: #1156b0;
+
+  --fg: #ecebe3;        /* primary text on dark */
+  --fg-mute: #8b8d88;   /* muted */
+  --fg-faint: #5b5e64;  /* faint */
+
+  --line: rgba(236, 235, 227, 0.08);
+
+  --mono: 'SFMono-Regular', 'Roboto Mono', 'DIN Alternate', 'Menlo', 'Consolas', monospace;
+  --sans: 'PingFang SC', 'Helvetica Neue', 'Heiti SC', sans-serif;
+}
+
+page {
+  @include theme-tokens;
+  background: var(--ink-800);
+  color: var(--fg);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  @include theme-tokens;
+  background: var(--ink-800);
+  color: var(--fg);
+  font-family: var(--sans);
+}
+
+view, text, button, input {
+  box-sizing: border-box;
+}
+
+/* strip default button chrome so we can restyle fully */
+button {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+  background: transparent;
+  border-radius: 0;
+  &::after {
+    border: none;
+  }
+}
